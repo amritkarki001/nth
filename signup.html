@@ -1,34 +1,104 @@
 <!DOCTYPE html>
 <html>
 
-<head><br>
-    <title>Login/Signup</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+<head>
 
-<body>
+    <head>
+        <title>Signup/login</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="signup.html">
+        <link rel="stylesheet" href="abc.js">
+    </head>
+    <title>Signup and Login Page</title>
     <nav>
-        <a href="home.html">Home</a>
+        <a href="index.html">Home</a>
         <a href="#">Contact</a>
         <a href="#">About</a>
         <a href="signup.html">Login/Signup</a>
-        <a href="#">Semesters</a>
+        <a href="semesters.html">Semesters</a>
     </nav>
-    <h1>Login/Signup</h1>
-    <form action="login.php" method="post">
-        <label for="username">Username</label>
-        <input type="text" name="username" id="username">
-        <label for="password">Password</label>
-        <input type="password" name="password" id="password">
-        <input type="submit" value="Login">
-    </form>
-    <form action="signup.php" method="post">
-        <label for="email">Email</label>
-        <input type="email" name="email" id="email">
-        <label for="password">Password</label>
-        <input type="password" name="password" id="password">
-        <input type="submit" value="Sign up">
-    </form>
+
+    <style>
+        /* CSS styling */
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 00;
+            padding: center: 10px;
+        }
+        
+        h1 {
+            text-align: center;
+        }
+        
+        .container {
+            display: -webkit-flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        .form-container {
+            background-color: #d2cadd;
+            border-radius: 80px;
+            padding: 50px;
+            margin: 25px;
+            /* Add margin between the two forms */
+        }
+        
+        .form-container label,
+        .form-container input {
+            display: block;
+            margin-bottom: 15px;
+        }
+        
+        .form-container input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 10px;
+            border-radius: 50px;
+            cursor: pointer;
+        }
+        
+        .form-container input[type="checkbox"] {
+            display: inline-block;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h1>Signup</h1>
+            <form action="signup.php" method="post">
+                <label for="signup-username">Username:</label>
+                <input type="text" id="signup-username" name="username" required>
+
+                <label for="signup-password">Password:</label>
+                <input type="password" id="signup-password" name="password" required>
+
+                <p class="terms">
+
+                    <label for="agree-terms"><center>I agree to the terms and conditions </center><input type="checkbox" id="agree-terms" name="agree-terms" required></label>
+                </p>
+                <input type="submit" value="Signup">
+            </form>
+        </div>
+        <div class="form-container">
+            <h1>Login</h1>
+            <form action="login.php" method="post">
+                <label for="login-username">Username:</label>
+                <input type="text" id="login-username" name="username" required>
+
+                <label for="login-password">Password:</label>
+                <input type="password" id="login-password" name="password" required>
+
+                <input type="submit" value="Login">
+            </form>
+        </div>
+    </div>
 </body>
 
 </html>
